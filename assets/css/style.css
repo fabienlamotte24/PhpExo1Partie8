@@ -1,0 +1,8 @@
+body{
+    background-image: linear-gradient(to right, black, #B40404);
+}
+.info{
+    background-color: white;
+    text-align:center;
+    margin-top:200px;
+}
