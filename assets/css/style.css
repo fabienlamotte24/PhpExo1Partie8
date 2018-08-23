@@ -2,7 +2,14 @@ body{
     background-image: linear-gradient(to right, black, #B40404);
 }
 .info{
-    background-color: white;
+    background-image: linear-gradient(to right, grey, white);
     text-align:center;
-    margin-top:200px;
+    margin-top:20%;
+    word-wrap: break-word;
+    border-radius: 15px;
+    padding-top:10px;
+    box-shadow: 3px 3px 5px black;
+}
+.bold{
+    font-weight: bold;
 }

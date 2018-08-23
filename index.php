@@ -1,12 +1,3 @@
-<?php
-    session_start();//Démarrage de la session de l'utilisateur
-
-    //Déclaration d'une variable de session 'userAgent'
-    //session_id s'il n'est pas défini génère un id aléatoire
-    //C'est une fonction préétabli par PHP
-    $_SESSION['userAgent'] = session_id();
-    $_SESSION['serverName'] = 'serveurDeMaladeT\'esPasPrêt';//Déclaration d'une variable de session 'serverName'
-?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -21,13 +12,12 @@
   <body>
       <div class="container">
           <div class="row">
-              <div class="offset-lg-3 col-lg-6 info">
-                <p>
-                    Votre User Agent est: <b><?php echo $_SESSION['userAgent']; ?></b><br /><!--Affichage de la valeur des valeurs de session-->
-                    Votre adresse IP est: <b><?php echo $_SERVER['REMOTE_ADDR']; ?></b> <br /><!--Affichage de la valeur des valeurs de session-->
+              <div class="offset-3 col-6 info">
+                <p>User Agent: <span class="bold"><?= $_SERVER['HTTP_USER_AGENT']; ?></span></p><!--Affichage de l'User Agent-->
+                  <!--$_SERVER['HTTP_USER_AGENT'] est une fonction pré-établie par PHP pour connaître l'User Agent-->
+                <p>Votre adresse IP est: <span class="bold"><?= $_SERVER['REMOTE_ADDR']; ?></span></p><!--Affichage de la valeur de session-->
                   <!--$_SERVER['REMOTE_ADDR'] est une fonction pré-établie par PHP pour connaître l'adresse IP-->
-                  Et votre serveur s'appelle: <b> <?php echo $_SESSION['serverName']; ?></b><!--Affichage de la valeur des valeurs de session-->
-                </p>
+                <p>Nom du serveur: <span class="bold"> <?= $_SERVER['SERVER_NAME']; ?></span></p><!--Affichage de la valeur de session-->
               </div>
           </div>
       </div>
